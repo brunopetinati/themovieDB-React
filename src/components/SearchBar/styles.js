@@ -1,35 +1,45 @@
 import styled from "styled-components";
-import { MenuItem } from "@material-ui/core";
 import { rem } from 'polished'
 
 import colors from '../../constants/colors'
-import logo from '../../assets/logo.svg'
 
+const placeHolderColor = colors.placeHolder
+const textInputColor = colors.text
+const gradientSearchButton = colors.gradientSearchButton
+const white = colors.white
 
-const headerBackground = colors.headerBackground
-
-export const HeaderStyle = styled.div`
-  display: flex;
-  background: url(${logo}) no-repeat 24px;
-  background-color: ${headerBackground};
-  height: ${rem(64)};
-  width:100vw;
-  font-size: 2rem;
-  justify-content: center;
+export const Container = styled.div`
+  display:flex;
+  flex-direction: row;
   align-items: center;
+  margin-top: ${rem(64)};
+  margin-left: ${rem(32)};
 `;
 
-export const HeaderButton = styled(MenuItem)`
-  color: white !important;
-  height:100%;
-  &:hover {
-    background-color:#680a5e!important;
+
+export const SearchInput = styled.input`
+  width: 90%;
+  height: ${rem(24)};
+  font-size: ${rem(16)};
+  color: ${placeHolderColor};
+  border: none;
+  border-radius: ${rem(30)};
+  padding: ${rem(10)} ${rem(20)};
+
+  :focus {
+    color: ${textInputColor};
   }
-  @media (max-width: 1024px) {
-    font-size: 10px !important;
-  }
-  @media (max-width: 750px) {
-    font-size: 9px !important;
-    width: 60%;
+`;
+
+export const SearcButton = styled.button`
+  background: linear-gradient(to right, ${gradientSearchButton[0]}, ${gradientSearchButton[1]}); 
+  color: ${white};
+  border-radius: ${rem(30)};
+  height: ${rem(46)};
+  width: ${rem(96)};
+  border: none;
+  margin-left: ${rem(-64)};
+  :hover {
+    background: ${gradientSearchButton[1]};
   }
 `;

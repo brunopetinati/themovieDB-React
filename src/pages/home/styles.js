@@ -24,8 +24,12 @@ export const SearchBarContainer = styled.hgroup`
   font-family: 'Source Sans Pro', Arial, sans-serif;
   color: white !important;
 
-  h2, h3 {
+  h2, h3, span {
     margin: 0 auto;
     margin-left: ${rem(32)};
+  }
+
+  span {
+    font-size: ${rem(12)};
   }
 `;

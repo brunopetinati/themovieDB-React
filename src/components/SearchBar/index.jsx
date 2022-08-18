@@ -1,20 +1,15 @@
-import { useNavigate } from "react-router-dom";
-import { HeaderStyle, HeaderButton } from "./styles";
 
-const Header = () => {
+import { Container, SearchInput, SearcButton } from './styles'
 
-	const navigate = useNavigate(); 
+
+const SearchBar = () => {
 
 	return (
-    
-	<HeaderStyle>
+	<Container>
+		<SearchInput placeholder="Search for a movie, TV show, person..."></SearchInput>
+		<SearcButton>Search</SearcButton>
+	</Container>	
+	)
+};
 
-		<HeaderButton onClick={() => navigate.push("/") }>Home</HeaderButton>
-		<HeaderButton onClick={() => navigate.push("/my_favorite_movies") }>My Songs</HeaderButton>
-		<HeaderButton onClick={() => navigate.push("/login") }>Login</HeaderButton>
-		<HeaderButton onClick={() => navigate.push("/create_account") }>Register</HeaderButton>
-
-	</HeaderStyle>)
-}
-
-export default Header;
+export default SearchBar;
