@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Routes from "./routes/index"
+import { useEffect } from "react"
+import { DefaultContainer } from "./constants/global_styles"
 
 function App() {
+  
+  useEffect(() => {
+    document.title = "The Movie DB - A Creation with React"
+  }, []);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes />
   );
 }
 
