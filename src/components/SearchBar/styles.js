@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { rem } from 'polished'
+import { MenuItem } from "@material-ui/core";
 
 import colors from '../../constants/colors'
 
@@ -34,12 +35,15 @@ export const SearchInput = styled.input`
 export const SearcButton = styled.button`
   background: linear-gradient(to right, ${gradientSearchButton[0]}, ${gradientSearchButton[1]}); 
   color: ${white};
+  font-weight: bold;
+  font-size: ${rem(14)};
   border-radius: ${rem(30)};
   height: ${rem(46)};
   width: ${rem(96)};
   border: none;
-  margin-left: ${rem(-64)};
+  margin-left: ${rem(-96)};
   :hover {
+    cursor: pointer;
     background: ${gradientSearchButton[1]};
   }
 `;

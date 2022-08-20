@@ -1,15 +1,15 @@
 import { ADD_TO_LIST } from "./action-types";
 
-const songsReducer = (state = [], action) => {
+const moviesReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TO_LIST:
-      const { song } = action;
+      const { movie } = action;
       state = []
-      return [...state, song];
+      return [...state, movie];
 
     default:
       return state;
   }
 };
 
-export default songsReducer;
+export default moviesReducer;

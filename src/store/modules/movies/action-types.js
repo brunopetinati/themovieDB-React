@@ -1,1 +1,1 @@
-export const ADD_TO_LIST = "@songlist/ADD";
+export const ADD_TO_LIST = "@movielist/ADD";

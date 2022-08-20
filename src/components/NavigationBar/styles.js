@@ -15,7 +15,6 @@ export const NavigationBarStyle = styled.div`
   background: url(${logo}) no-repeat ${rem(32)};
   background-size: ${rem(150)};
   background-color: ${headerBackground};
-  padding-left: ${rem(64)};
   height: ${rem(64)};
   width:100vw;
   justify-content: center;

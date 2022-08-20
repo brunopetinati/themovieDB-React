@@ -1,22 +1,22 @@
 import axios from "axios";
-import { addSongs } from "../authentication/actions";
+import { API_BASE_URL, API_KEY, EXAMPLE_URL} from '../../../constants/urls'
+import { addMovies } from './actions'
 
 
-export const addSongsThunk = (setError) => (dispatch) => {
+/* export const addInputMoviesThunk = (inputMovies, setError) => (dispatch) => {
   axios
-    .get(`https://sleepy-sea-69639.herokuapp.com/https://api.deezer.com/playlist/7932030762`)
+    .get(`https://sleepy-sea-69639.herokuapp.com/https://api.deezer.com/search?q=${inputMovies}`)
     .then((res) => {
-      dispatch(addSongs(res.data.tracks.data));
-    })
-    .catch((err) => setError(true));
-};
-
-
-export const addInputSongsThunk = (inputSong, setError) => (dispatch) => {
-  axios
-    .get(`https://sleepy-sea-69639.herokuapp.com/https://api.deezer.com/search?q=${inputSong}`)
-    .then((res) => {
-      dispatch(addSongs(res.data.data));
+      dispatch(addMovies(res.data.results));
     })
     .catch((err) => console.log(err));
+}; */
+
+export const addMoviesThunk = (setError) => (dispatch) => {
+  axios
+    .get(EXAMPLE_URL)
+    .then((res) => {
+      dispatch(addMovies(res.data.results));
+    })
+    .catch((err) => setError(true));
 };
