@@ -9,6 +9,7 @@ const textInputColor = colors.text
 const gradientSearchButton = colors.gradientSearchButton
 const gradientSearchButtonOnHover = colors.gradientSearchButtonOnHover
 const white = colors.white
+const inputColor = colors.body
 
 export const Container = styled.div`
   display:flex;
@@ -24,6 +25,7 @@ export const SearchInput = styled.input`
   height: ${rem(24)};
   font-size: ${rem(16)};
   color: ${placeHolderColor};
+  background-color:${inputColor};
   border: none;
   border-radius: ${rem(30)};
   padding: ${rem(10)} ${rem(20)};

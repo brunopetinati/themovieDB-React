@@ -1,11 +1,12 @@
 
-import { SearchBarContainer } from './styles'
+
+import { Container, SearchBarContainer } from './styles'
 import SearchBar  from '../../components/SearchBar'
 import MoviesSession from '../../components/MoviesSession'
 
 const HomePage = () => {
   return(
-    <>
+    <Container>
       <SearchBarContainer>
         <h2>Welcome.</h2>
         <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
@@ -13,7 +14,7 @@ const HomePage = () => {
         <SearchBar />
       </SearchBarContainer>
       <MoviesSession />
-    </>
+    </Container>
   )
 };
 

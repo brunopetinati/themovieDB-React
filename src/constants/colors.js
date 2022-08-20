@@ -1,7 +1,6 @@
 const colors = {
   
   text: "#263238",
-  white: "#ffffff",
   faded: "#8a9094",
   primary: "#5bb7db",
   
@@ -12,6 +11,8 @@ const colors = {
   red: '#ee0000',
   orange: '#ff5500',
   green: '#00d900',
+  white: "#f9f9f9",
+  body: '#f8f8f8',
 
   headerBackground: '#032540',
   placeHolder: 'rgba(0,0,0,0.5)',

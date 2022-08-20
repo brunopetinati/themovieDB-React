@@ -5,6 +5,7 @@ import colors from '../../constants/colors'
 import banner from '../../assets/banner.jpg'
 
 const white = colors.white
+const bodyColor = colors.body
 
 export const SearchBarContainer = styled.hgroup`
   display: flex;
@@ -32,4 +33,8 @@ export const SearchBarContainer = styled.hgroup`
   span {
     font-size: ${rem(12)};
   }
+`;
+
+export const Container = styled.div`
+  background-color: ${bodyColor};
 `;
