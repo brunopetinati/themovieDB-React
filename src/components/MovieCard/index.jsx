@@ -11,12 +11,11 @@ const MovieCard = ({ title, poster_path, vote_average, overview}) => {
 
   const movies = useSelector((state) => state.movies);
 
-  console.log('aqui está o movies', movies)
-
 
   useEffect(() => {
     dispatch(addMoviesThunk(setError));
-  }, [dispatch]);
+  }, [dispatch, title, poster_path, vote_average, overview]);
+
 
   return (
     <motion.div
@@ -26,9 +25,9 @@ const MovieCard = ({ title, poster_path, vote_average, overview}) => {
       transition={{ duration: 2 }}
     >
        <div className="card">
-        <img src="img_avatar.png" alt="kkk nem a imagem ta aparecendo"/>
+        <img src={IMAGE_BASE_URL + poster_path} alt="Imagem"/>
         <div className="container">
-          <h4><b>{title}</b></h4>
+          <h4>{title}</h4>
           <p>{overview}</p>
           <p>{vote_average}</p>
         </div>
