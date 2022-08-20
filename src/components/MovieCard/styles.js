@@ -3,8 +3,8 @@ import { rem } from 'polished'
 import colors from '../../constants/colors'
 
 const faded = colors.faded
-const red = colors.danger
-const orange = colors.warning
+const red = colors.red
+const orange = colors.orange
 const green = colors.green
 
 export const CardStyle = styled.div`
@@ -19,8 +19,9 @@ export const CardStyle = styled.div`
  }
 
  span {
-  color: ${colors.faded};
+  color: ${faded};
   margin: 0 auto;
+  font-size: 12px;
  }
 `;
 
@@ -34,7 +35,6 @@ export const HeaderCardStyle = styled.div`
  h4 {
   margin: 0 auto;
  }
-
 `;
 
 export const VoteAverageRedStyle = styled.p`
