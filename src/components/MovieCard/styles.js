@@ -1,35 +1,58 @@
 import styled from "styled-components";
 import { rem } from 'polished'
-
 import colors from '../../constants/colors'
-import banner from '../../assets/banner.jpg'
 
-const white = colors.white
+const faded = colors.faded
+const red = colors.danger
+const orange = colors.warning
+const green = colors.green
 
-export const SearchBarContainer = styled.hgroup`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
+export const CardStyle = styled.div`
+ width: 150px;
+ margin: 32px;
+ display:flex;
+ flex-direction: column;
 
-  background: url(${banner}) no-repeat;
-  background-size: 100%;
-  background-color: ${white};
-  
-  min-height: ${rem(300)};
-  height: ${rem(360)};
-  width:100vw;
+ img {
+  width:150px;
+  border-radius: 10%;
+ }
 
-  font-size: 2rem;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
-  color: white !important;
+ span {
+  color: ${colors.faded};
+  margin: 0 auto;
+ }
+`;
 
-  h2, h3, span {
-    margin: 0 auto;
-    margin-left: ${rem(32)};
-  }
+export const HeaderCardStyle = styled.div`
+ display:flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-around;
+ margin-top: 8px;
 
-  span {
-    font-size: ${rem(12)};
-  }
+ h4 {
+  margin: 0 auto;
+ }
+
+`;
+
+export const VoteAverageRedStyle = styled.p`
+ color:${red};
+`;
+
+export const VoteAverageOrangeStyle = styled.p`
+ color: ${orange};
+`;
+
+export const VoteAverageGreenStyle = styled.p`
+ color: ${green};
+ height: 30px;
+ width: 30px;
+ border-radius:100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
 `;

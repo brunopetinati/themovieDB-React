@@ -1,21 +1,15 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
-import { addMoviesThunk } from '../../store/modules/movies/thunk'
 import { IMAGE_BASE_URL } from '../../constants/urls'
+import { CardStyle, HeaderCardStyle } from './styles'
+
+import { VoteAverageRedStyle, VoteAverageOrangeStyle, VoteAverageGreenStyle } from './styles'
+
+
 
 const MovieCard = ({ title, poster_path, vote_average, overview}) => {
-
-  const dispatch = useDispatch();
-  const [error, setError] = useState(false);
-
-  const movies = useSelector((state) => state.movies);
-
-
-  useEffect(() => {
-    dispatch(addMoviesThunk(setError));
-  }, [dispatch, title, poster_path, vote_average, overview]);
-
+  
 
   return (
     <motion.div
@@ -24,14 +18,14 @@ const MovieCard = ({ title, poster_path, vote_average, overview}) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
     >
-       <div className="card">
+       <CardStyle>
         <img src={IMAGE_BASE_URL + poster_path} alt="Imagem"/>
-        <div className="container">
+        <HeaderCardStyle>
           <h4>{title}</h4>
-          <p>{overview}</p>
-          <p>{vote_average}</p>
-        </div>
-      </div> 
+          {vote_average < 5 ? <VoteAverageOrangeStyle>{vote_average}</VoteAverageOrangeStyle> : <VoteAverageGreenStyle>{vote_average}</VoteAverageGreenStyle>}
+        </HeaderCardStyle>
+        <span>Jul 29,  2022</span>
+      </CardStyle> 
     </motion.div>
   )
 };

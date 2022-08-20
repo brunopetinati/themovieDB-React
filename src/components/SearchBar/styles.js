@@ -7,6 +7,7 @@ import colors from '../../constants/colors'
 const placeHolderColor = colors.placeHolder
 const textInputColor = colors.text
 const gradientSearchButton = colors.gradientSearchButton
+const gradientSearchButtonOnHover = colors.gradientSearchButtonOnHover
 const white = colors.white
 
 export const Container = styled.div`
@@ -44,6 +45,6 @@ export const SearcButton = styled.button`
   margin-left: ${rem(-96)};
   :hover {
     cursor: pointer;
-    background: ${gradientSearchButton[1]};
+    background: linear-gradient(to right, ${gradientSearchButtonOnHover[0]}, ${gradientSearchButtonOnHover[1]}); 
   }
 `;

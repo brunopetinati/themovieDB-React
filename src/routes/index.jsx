@@ -10,8 +10,6 @@ import CreateAccount from "../pages/create-account/";
 
 
 const appRoutes = () => {
-  //const state = useSelector((state) => state.login);
-    let state = ''
 
   return (
     <AnimatePresence>      
