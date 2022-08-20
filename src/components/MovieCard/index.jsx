@@ -20,11 +20,11 @@ const MovieCard = ({ title, poster_path, vote_average, overview}) => {
     >
        <CardStyle>
         <img src={IMAGE_BASE_URL + poster_path} alt="Imagem"/>
+        {vote_average < 5 ? <VoteAverageOrangeStyle>{vote_average}</VoteAverageOrangeStyle> : <VoteAverageGreenStyle>{vote_average}</VoteAverageGreenStyle>}
         <HeaderCardStyle>
           <h4>{title}</h4>
-          {vote_average < 5 ? <VoteAverageOrangeStyle>{vote_average}</VoteAverageOrangeStyle> : <VoteAverageGreenStyle>{vote_average}</VoteAverageGreenStyle>}
+          <span>Jul 29,  2022</span>
         </HeaderCardStyle>
-        <span>Jul 29,  2022</span>
       </CardStyle> 
     </motion.div>
   )

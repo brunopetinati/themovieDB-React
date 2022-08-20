@@ -12,6 +12,7 @@ export const CardStyle = styled.div`
  margin: ${rem(32)};
  display:flex;
  flex-direction: column;
+ cursor: pointer;
 
  img {
   width: ${rem(150)};
@@ -27,35 +28,37 @@ export const CardStyle = styled.div`
 
 export const HeaderCardStyle = styled.div`
  display:flex;
- flex-direction: row;
+ flex-direction: column;
  align-items: center;
  justify-content: space-around;
- margin-top: ${rem(8)};
 
  h4 {
   margin: 0 auto;
  }
 `;
 
-export const VoteAverageRedStyle = styled.p`
+const VoteAverage = styled.div`
+height: ${rem(30)};
+width: ${rem(30)};
+border-radius:100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-top: ${rem(-20)};
+margin-left: ${rem(134)};
+background-color: white;
+font-size: ${rem(13)};
+`;
+
+export const VoteAverageRedStyle = styled(VoteAverage)`
  color:${red};
 `;
 
-export const VoteAverageOrangeStyle = styled.p`
+export const VoteAverageOrangeStyle = styled(VoteAverage)`
  color: ${orange};
 `;
 
-export const VoteAverageGreenStyle = styled.p`
+export const VoteAverageGreenStyle = styled(VoteAverage)`
  color: ${green};
- height: ${rem(30)};
- width: ${rem(30)};
- border-radius:100%;
- display: flex;
- flex-direction: row;
- justify-content: center;
- align-items: center;
- margin: 0 auto;
- margin-top: ${rem(-40)};
- background-color: white;
- font-size: ${rem(13)};
 `;
