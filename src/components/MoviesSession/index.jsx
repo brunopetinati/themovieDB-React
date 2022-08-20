@@ -33,7 +33,7 @@ const MoviesSession = ({ genre }) => {
   return (
     <Container>
       <h2>{genre || 'MissingValue'}</h2>
-      <MovieCard title={exampleTitle} poster_path={examplePosterPath} vote_average={exampleVotaAverage} overview={exampleOverview}/>
+      { movies && movies.map((movie) => <MovieCard title={movie.original_title} poster_path={movie.poster_path} vote_average={movie.vote_average} overview={movie.overview}/>)}
     </Container>
   )
 };
