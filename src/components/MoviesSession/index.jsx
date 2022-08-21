@@ -4,20 +4,21 @@ import { useState, useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { Title, MoviesSessionContainer } from './styles'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { getMoviesThunk } from '../../store/modules/movies/thunk'
 import 'swiper/css/bundle'
 import MovieCard from '../MovieCard'
 
 
-const MoviesSession = ({ genre, thunkRequest }) => {
+const MoviesSession = ({ genre, URL, index }) => {
 
   const dispatch = useDispatch();
   const [error, setError] = useState(false);
 
-  const movies = useSelector((state) => state.movies[0]);
+  const movies = useSelector((state) => state.movies[index]);
 
   useEffect(() => {
-    dispatch(thunkRequest(setError));
-  }, [dispatch, thunkRequest]);
+    dispatch(getMoviesThunk(setError, URL));
+  }, [dispatch]);
 
 
   return (<motion.div
@@ -62,6 +63,7 @@ const MoviesSession = ({ genre, thunkRequest }) => {
             original_language={movie.original_language}
             popularity={movie.popularity}
             release_date={movie.release_date}
+            video={movie.video}
             />
           </SwiperSlide>)
           }

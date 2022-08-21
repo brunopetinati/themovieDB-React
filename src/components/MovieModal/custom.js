@@ -1,4 +1,5 @@
 import colors from '../../constants/colors'
+import { rem } from 'polished'
 
 const customModalStyle = {
   content: {
@@ -8,8 +9,8 @@ const customModalStyle = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '400px',
-    height: '400px',
+    width: rem(600),
+    height: rem(400),
     backgroundColor: colors.body,
     borderRadius: '3%'
   }

@@ -1,7 +1,7 @@
 import { Container, SearchBarContainer } from './styles'
 import SearchBar  from '../../components/SearchBar'
 import MoviesSession from '../../components/MoviesSession'
-import { mostPopularMoviesThunk } from '../../store/modules/movies/thunk'
+import { MOST_POPULAR_URL, KIDS_URL, DRAMA_URL } from '../../constants/urls'
 
 const HomePage = () => {
   return(
@@ -12,7 +12,10 @@ const HomePage = () => {
         <span>This is a small project that consumes the "The Movie DB API" available for developers. All rights reserved. You can checkout for more clicking <strong><a href="https://www.themoviedb.org/documentation/api">here!!</a></strong></span>
         <SearchBar />
       </SearchBarContainer>
-      <MoviesSession genre={'Populares e recentes'} thunkRequest={mostPopularMoviesThunk}/>
+      <MoviesSession key={0} genre={'Populares'} URL={MOST_POPULAR_URL} index={0}/>
+      <MoviesSession key={1} genre={'KIDS'} URL={KIDS_URL} index={1} />
+      <MoviesSession key={2} genre={'Dramas'} URL={DRAMA_URL} index={2} />
+
     </Container>
   )
 };

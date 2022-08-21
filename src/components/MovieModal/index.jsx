@@ -2,8 +2,7 @@ import { IMAGE_BASE_URL } from '../../constants/urls'
 import { dayMonthYearPTBR } from '../../constants/date_convert'
 import { Container } from './styles'
 
-
-const MovieModal = ({title, poster_path, vote_count, vote_average, overview, original_language, popularity, release_date}) => {
+const MovieModal = ({title, poster_path, vote_count, vote_average, overview, original_language, popularity, release_date, video}) => {
 
   return(
     <Container>

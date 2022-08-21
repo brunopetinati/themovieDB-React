@@ -4,7 +4,6 @@ const moviesReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TO_LIST:
       const { movie } = action;
-      state = []
       return [...state, movie];
 
     default:
