@@ -31,9 +31,11 @@ export const HeaderCardStyle = styled.div`
  flex-direction: column;
  align-items: center;
  justify-content: space-around;
+ text-align: center;
 
  h4 {
   margin: 0 auto;
+  margin-bottom: ${rem(8)};
  }
 `;
 

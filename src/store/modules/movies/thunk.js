@@ -12,11 +12,11 @@ import { addMovies } from './actions'
     .catch((err) => console.log(err));
 }; */
 
-export const addMoviesThunk = (setError) => (dispatch) => {
-  axios
+export const mostPopularThunk = (setError) => (dispatch) => {
+  (async () => { await axios
     .get(EXAMPLE_URL)
     .then((res) => {
       dispatch(addMovies(res.data.results));
     })
     .catch((err) => setError(true));
-};
+})()};
