@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_BASE_URL, API_KEY, EXAMPLE_URL} from '../../../constants/urls'
+import { EXAMPLE_URL} from '../../../constants/urls'
 import { addMovies } from './actions'
 
 
@@ -12,7 +12,7 @@ import { addMovies } from './actions'
     .catch((err) => console.log(err));
 }; */
 
-export const mostPopularThunk = (setError) => (dispatch) => {
+export const mostPopularMoviesThunk = (setError) => (dispatch) => {
   (async () => { await axios
     .get(EXAMPLE_URL)
     .then((res) => {

@@ -1,29 +1,20 @@
-import { useState, useEffect } from "react";
-import { useDispatch,useSelector } from "react-redux";
+import { useState } from "react";
 import { IMAGE_BASE_URL } from '../../constants/urls'
 import { CardStyle, HeaderCardStyle, VoteAverageOrangeStyle, VoteAverageGreenStyle  } from './styles'
+import customModalStyle from '../MovieModal/custom'
+import MovieModal from '../MovieModal'
 import Modal from 'react-modal'
+import x from '../../assets/times-solid.svg'
+import { monthYearPTBR } from "../../constants/date_convert";
 
 
-
-const MovieCard = ({ title, poster_path, vote_average, overview}) => {
+const MovieCard = ({ title, poster_path, vote_average, vote_count, overview, original_language, popularity, release_date}) => {
 
   const [modal, showModal] = useState(false);
   
   const handleToggle = () => {
     showModal(!modal)
   };
-
-  const customStyle = {
-    content: {
-      top:'50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)'
-    }
-  }
 
 
   return (<>
@@ -32,16 +23,25 @@ const MovieCard = ({ title, poster_path, vote_average, overview}) => {
         {vote_average < 5 ? <VoteAverageOrangeStyle>{vote_average}</VoteAverageOrangeStyle> : <VoteAverageGreenStyle>{vote_average}</VoteAverageGreenStyle>}
         <HeaderCardStyle>
           <h4>{title}</h4>
-          <span>Jul 29,  2022</span>
+          <span>{monthYearPTBR(release_date)}</span>
         </HeaderCardStyle>
       </CardStyle> 
       <Modal
       isOpen={modal}
       onRequestClose={modal}
-      style={customStyle}
+      style={customModalStyle}
       > 
-      <h6>{overview}</h6> 
-      <button onClick={handleToggle}></button>
+        <img src={x} onClick={handleToggle} style={{width: '15px', marginLeft: '382px', cursor: 'pointer'}} /> 
+        <MovieModal 
+        title={title} 
+        poster_path={poster_path}
+        overview={overview} 
+        vote_count={vote_count} 
+        vote_average={vote_average} 
+        original_language={original_language}
+        popularity={popularity}
+        release_date={release_date}
+        />
       </Modal>
     </>
   )
