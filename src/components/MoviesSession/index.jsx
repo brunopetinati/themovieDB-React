@@ -9,7 +9,7 @@ import 'swiper/css/bundle'
 import MovieCard from '../MovieCard'
 
 
-const MoviesSession = ({ keyProp, genre, URL, index }) => {
+const MoviesSession = ({ genre, URL, index }) => {
 
   const dispatch = useDispatch();
   const [error, setError] = useState(false);
@@ -22,8 +22,8 @@ const MoviesSession = ({ keyProp, genre, URL, index }) => {
 
 
   return (
-    <div key={keyProp}>
     <motion.div
+    key={index}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
@@ -31,6 +31,7 @@ const MoviesSession = ({ keyProp, genre, URL, index }) => {
     >
       <Title>{genre || 'Outros'}</Title>
       <Swiper 
+      key={index}
       slidesPerView={7}
       scrollbar={{ draggable: true }}
       loop={true}
@@ -54,7 +55,7 @@ const MoviesSession = ({ keyProp, genre, URL, index }) => {
       >
         <MoviesSessionContainer>
           { movies && movies.map((movie, index) => 
-          <SwiperSlide key={index + keyProp}>
+          <SwiperSlide key={index}>
             <MovieCard 
             key={movie.id}
             title={movie.original_title} 
@@ -72,7 +73,6 @@ const MoviesSession = ({ keyProp, genre, URL, index }) => {
         </MoviesSessionContainer>
       </Swiper>
     </motion.div>
-    </div>
   )
 };
 

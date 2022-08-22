@@ -7,7 +7,7 @@ const SearchResultModal = ({moviesFromSearchBar, inputValue}) => {
 
   return(
   <Container>
-    <h2>Aqui estão os resultados para sua busca em <createdtag>{inputValue}</createdtag></h2>
+    <h2>Aqui estão os resultados para sua busca em <strong>{inputValue}</strong></h2>
     <Swiper 
       slidesPerView={5}
       loop={true}

@@ -7,7 +7,7 @@ export const Container = styled.div`
   text-align: center;
   padding: ${rem(50)};
 
-  createdtag {
+  strong {
     color: ${colors.gradientSearchButton[1]};
   }
 `;
