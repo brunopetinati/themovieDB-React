@@ -6,7 +6,7 @@ const MovieModal = ({title, poster_path, vote_count, vote_average, overview, ori
 
   return(
     <Container>
-      <img src={IMAGE_BASE_URL + poster_path} alt="Imagem" style={{width: '150px'}}/>
+      <img src={IMAGE_BASE_URL + poster_path} alt="Sem imagem" style={{width: '150px'}}/>
       <h3>{title}</h3>
       <div>Nota: {vote_average}</div>
       <div>Votos: {vote_count}</div>

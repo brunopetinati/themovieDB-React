@@ -1,5 +1,4 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { useSelector } from "react-redux";
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
 
 import NavigationBar from '../components/NavigationBar'

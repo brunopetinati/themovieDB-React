@@ -20,7 +20,7 @@ const MovieCard = ({ title, poster_path, vote_average, vote_count, overview, ori
   return (
     <>
       <CardStyle onClick={() => handleToggle()}>
-        <img src={IMAGE_BASE_URL + poster_path} alt="Imagem"/>
+        <img src={IMAGE_BASE_URL + poster_path} alt="Sem imagem"/>
         {vote_average < 5 ? <VoteAverageOrangeStyle>{vote_average}</VoteAverageOrangeStyle> : <VoteAverageGreenStyle>{vote_average}</VoteAverageGreenStyle>}
         <HeaderCardStyle>
           <h4>{title}</h4>
@@ -30,7 +30,6 @@ const MovieCard = ({ title, poster_path, vote_average, vote_count, overview, ori
 
       <Modal
       isOpen={modal}
-      onRequestClose={modal}
       style={customModalStyle}
       > 
         <img src={x} onClick={handleToggle} style={{width: '15px', marginLeft: '580px', cursor: 'pointer'}} alt="Imagem"/> 

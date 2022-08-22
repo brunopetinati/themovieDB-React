@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { rem } from 'polished'
-import { MenuItem } from "@material-ui/core";
 
 import colors from '../../constants/colors'
 

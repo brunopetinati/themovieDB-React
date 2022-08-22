@@ -14,15 +14,19 @@ let months = {
 }
 
 export function monthYearPTBR(date){
-  let month = date[5]+date[6]
-  let readableMonth =  months[month]
-  let year = date[0]+date[1]+date[2]+date[3]
-  return readableMonth + ', ' + year
+  if(date) {
+    let month = date[5]+date[6]
+    let readableMonth =  months[month]
+    let year = date[0]+date[1]+date[2]+date[3]
+    return readableMonth + ', ' + year
+  } else { return 'Data de lançamento não cadastrada'}
 }
 
 export function dayMonthYearPTBR(date){
-  let day = date[8]+date[9]
-  let month = date[5]+date[6]
-  let year = date[0]+date[1]+date[2]+date[3]
-  return day + '/' + month + '/' + year
+    if(date) {
+    let day = date[8]+date[9]
+    let month = date[5]+date[6]
+    let year = date[0]+date[1]+date[2]+date[3]
+    return day + '/' + month + '/' + year
+  } else { return 'Data de lançamento não cadastrada'}
 }
