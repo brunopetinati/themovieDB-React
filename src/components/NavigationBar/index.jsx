@@ -9,10 +9,10 @@ const NavigationBar = () => {
     
 	<NavigationBarStyle>
 
-		<NavigationBarButton onClick={() => navigate.push("/") }>Home</NavigationBarButton>
-		<NavigationBarButton onClick={() => navigate.push("/my_favorites") }>Favorites</NavigationBarButton>
-		<NavigationBarButton onClick={() => navigate.push("/login") }>Login</NavigationBarButton>
-		<NavigationBarButton onClick={() => navigate.push("/create_account") }>Create Account</NavigationBarButton>
+		<NavigationBarButton onClick={() => navigate("/") }>Home</NavigationBarButton>
+		<NavigationBarButton onClick={() => navigate("/my_favorites") }>Favorites</NavigationBarButton>
+		<NavigationBarButton onClick={() => navigate("/login") }>Login</NavigationBarButton>
+		<NavigationBarButton onClick={() => navigate("/create_account") }>Create Account</NavigationBarButton>
 
 	</NavigationBarStyle>)
 }
