@@ -17,7 +17,7 @@ const LoginForm = () => {
   const [loading, setLoading] = useState(false)
 
   const schema = yup.object().shape({
-    email: yup.string().email("Por favor, insira um email válido").required("This field is required"),
+    email: yup.string().email("Por favor, insira um email válido").required("Por favor, insira o email para prosseguir"),
 
     password: yup
       .string()

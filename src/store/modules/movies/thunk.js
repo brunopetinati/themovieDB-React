@@ -2,7 +2,7 @@ import axios from "axios";
 import { addMovies } from './actions'
 
 
-export const getMoviesThunk = (setError, URL) => (dispatch) => {
+export const getMoviesThunk = (URL) => (dispatch) => {
   (async () => { await axios
     .get(URL)
     .then((res) => {

@@ -28,9 +28,8 @@ const CreateAccountForm = () => {
       .min(4, "É necessário ao menos 4 dígitos")
       .required("Esse campo é necessário para prosseguir"),
 
-    passwordConfirm: yup
-      .string()
-      .oneOf([yup.ref("password")], "As senhas não coincidem. Por favor, digite novamente."),
+    passwordConfirm: yup.string().required()
+    .oneOf([yup.ref('password'), null], 'As senhas não coincidem. Por favor, digite novamente.')
   });
 
 
@@ -75,11 +74,12 @@ const CreateAccountForm = () => {
                 required: "Required",
               })}
             />
-          <div>{errors.email?.message}</div>
+          <div>{errors.password?.message}</div>
             <StyledInput
               label="Password"
               name="password"
               type="password"
+              ref="password"
               autoComplete="off"
               placeholder="Senha"
               {...register("password", {
@@ -89,11 +89,11 @@ const CreateAccountForm = () => {
           <div>{errors.password?.message}</div>
             <StyledInput
               label="Password confirmation"
-              name="password_confirmation"
+              name="passwordConfirm"
               type="password"
               autoComplete="off"
               placeholder="Confirme a senha"
-              {...register("password_confirmation", {
+              {...register("passwordConfirm", {
                 required: "Required",
               })}
             />

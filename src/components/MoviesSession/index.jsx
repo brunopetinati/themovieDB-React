@@ -12,12 +12,11 @@ import MovieCard from '../MovieCard'
 const MoviesSession = ({ genre, URL, index }) => {
 
   const dispatch = useDispatch();
-  const [error, setError] = useState(false);
 
   const movies = useSelector((state) => state.movies[index]);
 
   useEffect(() => {
-    dispatch(getMoviesThunk(setError, URL));
+    dispatch(getMoviesThunk(URL));
   }, [dispatch, URL]);
 
 
