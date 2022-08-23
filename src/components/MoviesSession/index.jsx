@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion'
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { Title, MoviesSessionContainer } from './styles'
 import { Swiper, SwiperSlide } from 'swiper/react'

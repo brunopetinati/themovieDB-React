@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { DefaultForm, StyledButton, StyledInput } from './styles'
 import loginThunk from '../../store/modules/login/thunk'
 
