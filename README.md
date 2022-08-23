@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This app can be seen in:
+
+https://themovie-db-react.vercel.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
