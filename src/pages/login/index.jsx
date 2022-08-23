@@ -1,7 +1,12 @@
 import LoginForm from "../../components/LoginForm";
+import { Container } from './styles'
 
 const LoginPage = () => {
-  return(<LoginForm />)
+  return(
+    <Container>
+      <LoginForm />
+    </Container>
+  )
 };
 
 

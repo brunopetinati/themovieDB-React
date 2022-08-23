@@ -32,7 +32,7 @@ const MovieCard = ({ title, poster_path, vote_average, vote_count, overview, ori
       isOpen={modal}
       style={customModalStyle}
       > 
-        <img src={x} onClick={handleToggle} style={{width: '15px', marginLeft: '580px', cursor: 'pointer'}} alt="Imagem"/> 
+        <img src={x} onClick={handleToggle} style={{width: '15px', marginLeft: '580px', cursor: 'pointer'}} alt="x"/> 
         <MovieModal 
         title={title} 
         poster_path={poster_path}

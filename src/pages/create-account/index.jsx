@@ -1,7 +1,12 @@
 import CreateAccountForm from '../../components/CreateAccountForm'
+import { Container } from './styles'
 
 const CreateAccountPage = () => {
-  return(<CreateAccountForm/>)
+  return(
+    <Container>
+      <CreateAccountForm />
+    </Container>
+  )
 };
 
 

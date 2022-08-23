@@ -31,7 +31,7 @@ const SearchBar = () => {
 
 	return (<>
 		<Container>
-			<SearchInput placeholder="Encontre filmes que você nem sabia que existia! Os títulos estão no idioma inglês" 
+			<SearchInput placeholder="Encontre filmes que você nem sabia que existia! Os títulos dos filmes estão no idioma inglês ou idiomas asiáticos!" 
 			value={input} 
 			onChange={(e) => setInput(e.target.value)} />
 			<SearcButton onClick={() => searchForMovie(input)}>Search</SearcButton>
@@ -40,7 +40,7 @@ const SearchBar = () => {
       isOpen={modal}
       style={customModalStyle}
       > 
-      <img src={x} onClick={handleToggle} style={{width: '15px', marginLeft: '1278px', cursor: 'pointer'}} alt="Sem imagem"/> 
+      <img src={x} onClick={handleToggle} style={{width: '15px', marginLeft: '1278px', cursor: 'pointer'}} alt="x"/> 
 			{moviesFromSearchBar && <SearchResultModal moviesFromSearchBar={moviesFromSearchBar} inputValue={input}/>}
 		</Modal>	
 	</>

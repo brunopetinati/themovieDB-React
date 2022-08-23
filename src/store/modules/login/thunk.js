@@ -1,23 +1,22 @@
-import api from "../../../services/api";
+import myAPI from "../../../constants/my-api";
 import { userLogin } from "./actions";
 import Swal from "sweetalert2";
 
-const loginThunk = (result, history) => (dispatch) => {
-  api
+const loginThunk = (result, navigate) => (dispatch) => {
+  myAPI
     .post("/login", result)
     .then((res) => {
-      console.log(res);
       window.localStorage.setItem("authToken", res.data.accessToken);
       dispatch(userLogin(res.data.accessToken));
-      history.push("/locked");
+      navigate("/my_favorites");
       window.location.reload();
     })
     .catch(() =>
       Swal.fire({
         title: "Oops!",
-        text: "A simple error ocurred. Please verify information and try again",
+        text: "Por favor, reveja as informações e tente novamente.",
         icon: "error",
-        confirmButtonText: "Got it!",
+        confirmButtonText: "Entendi!",
       })
     );
 };

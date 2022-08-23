@@ -28,6 +28,7 @@ export const SearchInput = styled.input`
   border: none;
   border-radius: ${rem(30)};
   padding: ${rem(10)} ${rem(20)};
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 
   :focus {
     color: ${textInputColor};

@@ -1,18 +1,20 @@
+import { useSelector } from 'react-redux'
 import { useNavigate } from "react-router-dom";
 import { NavigationBarStyle, NavigationBarButton } from "./styles";
 
 const NavigationBar = () => {
 
 	const navigate = useNavigate(); 
-
+  const state = useSelector((state) => state.login);
+	
 	return (
     
 	<NavigationBarStyle>
 
-		<NavigationBarButton onClick={() => navigate("/") }>Home</NavigationBarButton>
-		<NavigationBarButton onClick={() => navigate("/my_favorites") }>Favorites</NavigationBarButton>
-		<NavigationBarButton onClick={() => navigate("/login") }>Login</NavigationBarButton>
-		<NavigationBarButton onClick={() => navigate("/create_account") }>Create Account</NavigationBarButton>
+		<NavigationBarButton onClick={() => navigate("/homepage") }>Home</NavigationBarButton>
+		{state.token && <NavigationBarButton onClick={() => navigate("/my_favorites") }>Favoritos</NavigationBarButton>}
+		<NavigationBarButton onClick={() => navigate("/") }>Login</NavigationBarButton>
+		<NavigationBarButton onClick={() => navigate("/create_account") }>Criar Conta</NavigationBarButton>
 
 	</NavigationBarStyle>)
 }

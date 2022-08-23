@@ -1,22 +1,22 @@
-import myAPI from "../../../static/my-api";
+import myAPI from "../../../constants/my-api";
 import { userRegister } from "./actions";
-//import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
-const usersThunk = (result, history) => async (dispatch) => {
+const userThunk = (createUserObject, navigate) => async (dispatch) => {
   await myAPI
-    .post("/users", result)
+    .post("/users", createUserObject)
     .then((res) => {
       dispatch(userRegister(res));
-      history.push("/login");
+      navigate("/");
     })
-    /* .catch((err) =>
+    .catch(() =>
       Swal.fire({
         title: "Oops!",
-        text: "A simple error ocurred. Please verify information and try again",
+        text: "Por favor, reveja as informações e tente novamente.",
         icon: "error",
-        confirmButtonText: "Got it!",
+        confirmButtonText: "Entendi!",
       })
-    ); */
+    );
 };
 
-export default usersThunk;
+export default userThunk;

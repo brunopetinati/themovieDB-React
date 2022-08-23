@@ -6,7 +6,7 @@ const genresObject = [
     'title':'Populares',
     'url': MOST_POPULAR,
     'index': 0
-  }/* ,
+  },
   {
     'title':'KIDS',
     'url': KIDS,
@@ -31,7 +31,7 @@ const genresObject = [
     'title':'Melhores de 2022',
     'url': BEST_OF_2022,
     'index': 5
-  } */
+  }
 ]
 
 export default genresObject;

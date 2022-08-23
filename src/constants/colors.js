@@ -2,7 +2,6 @@ const colors = {
   
   text: "#263238",
   faded: "#8a9094",
-  primary: "#5bb7db",
   
   danger: "#D94238",
   warning: "#f4c20d",
@@ -18,7 +17,9 @@ const colors = {
   placeHolder: 'rgba(0,0,0,0.5)',
   buttonOnHover: '#10b6dd',
   gradientSearchButton: ['#1dd4ab', '#02b5e3'],
-  gradientSearchButtonOnHover: ['#1dd4ab', '#019bc1']
+  gradientSearchButtonOnHover: ['#1dd4ab', '#019bc1'],
+  blueForForms : '#032540',
+  buttonOnHoverForForms: '#e6e8ff'
 };
 
 export default colors;
