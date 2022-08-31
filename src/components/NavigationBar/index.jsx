@@ -11,7 +11,7 @@ const NavigationBar = () => {
     
 	<NavigationBarStyle>
 
-		<NavigationBarButton onClick={() => navigate("/homepage") }>Home</NavigationBarButton>
+		<NavigationBarButton onClick={() => navigate("/home") }>Home</NavigationBarButton>
 		{state.token && <NavigationBarButton onClick={() => navigate("/my_favorites") }>Favoritos</NavigationBarButton>}
 		<NavigationBarButton onClick={() => navigate("/") }>Login</NavigationBarButton>
 		<NavigationBarButton onClick={() => navigate("/create_account") }>Criar Conta</NavigationBarButton>

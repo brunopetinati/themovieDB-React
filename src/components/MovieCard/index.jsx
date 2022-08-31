@@ -31,6 +31,7 @@ const MovieCard = ({ title, poster_path, vote_average, vote_count, overview, ori
       <Modal
       isOpen={modal}
       style={customModalStyle}
+      preventScroll={true}
       > 
         <img src={x} onClick={handleToggle} style={{width: '15px', marginLeft: '580px', cursor: 'pointer'}} alt="x"/> 
         <MovieModal 

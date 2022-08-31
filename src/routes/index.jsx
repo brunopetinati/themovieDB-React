@@ -17,7 +17,7 @@ const AppRoutes = () => {
     <AnimatePresence>      
       <NavigationBar /> 
         <Routes>
-          <Route exact path="/homepage" element={<HomePage />}/>
+          <Route exact path="/home" element={<HomePage />}/>
           <Route exact path="/" element={<LoginPage />}/>
           <Route exact path="/create_account" element={<CreateAccountPage />}/>
           { 

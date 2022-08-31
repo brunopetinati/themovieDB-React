@@ -11,7 +11,6 @@ import MovieCard from '../MovieCard'
 
 const MoviesSession = ({ genre, URL, index }) => {
 
-
   const dispatch = useDispatch();
 
   dispatch(getMoviesThunk(URL));
