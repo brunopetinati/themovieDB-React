@@ -11,12 +11,12 @@ import MovieCard from '../MovieCard'
 
 const MoviesSession = ({ genre, URL, index }) => {
 
-  const movies = useSelector((state) => state.movies[index]);
 
   const dispatch = useDispatch();
 
   dispatch(getMoviesThunk(URL));
 
+  const movies = useSelector((state) => state.movies[index]);
 
   return (
     <motion.div
