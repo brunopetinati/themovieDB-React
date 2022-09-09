@@ -16,12 +16,12 @@ const genresObject = [
     'title':'Dramas',
     'url': DRAMA,
     'index': 2
-  }/* ,
+  },
   {
     'title':'Ficção Científica',
     'url': SCI_FY,
     'index': 3
-  },
+  },/*
   {
     'title':'Você também pode gostar',
     'url': NOW_ON_THE_CINEMA,
