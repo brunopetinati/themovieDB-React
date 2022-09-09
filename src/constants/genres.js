@@ -16,7 +16,7 @@ const genresObject = [
     'title':'Dramas',
     'url': DRAMA,
     'index': 2
-  },
+  }/* ,
   {
     'title':'Ficção Científica',
     'url': SCI_FY,
@@ -31,7 +31,7 @@ const genresObject = [
     'title':'Melhores de 2022',
     'url': BEST_OF_2022,
     'index': 5
-  }
+  } */
 ]
 
 export default genresObject;
